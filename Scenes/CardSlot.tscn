@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dxa6gfcj7amfr"]
 
-[ext_resource type="Texture2D" uid="uid://d33p1sgg8in6y" path="res://CardSlot.png" id="1_5tl20"]
+[ext_resource type="Texture2D" uid="uid://d33p1sgg8in6y" path="res://Assets/CardSlot.png" id="1_5tl20"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5tl20"]
 size = Vector2(88, 122)

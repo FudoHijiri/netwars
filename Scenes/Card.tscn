@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://btr7nhsyst1bt"]
 
-[ext_resource type="Texture2D" uid="uid://br3rmtdok3vqx" path="res://Ace Playing Cards Tattoo Design.jpg" id="1_dd2wi"]
-[ext_resource type="Script" uid="uid://b8svusr3liwc0" path="res://Card.gd" id="1_hael8"]
+[ext_resource type="Texture2D" uid="uid://br3rmtdok3vqx" path="res://Assets/Ace Playing Cards Tattoo Design.jpg" id="1_dd2wi"]
+[ext_resource type="Script" uid="uid://b8svusr3liwc0" path="res://Scripts/Card.gd" id="1_hael8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hael8"]
 size = Vector2(88, 123)
 
 [node name="Card" type="Node2D" unique_id=1932113617]
+position = Vector2(200, 890)
 script = ExtResource("1_hael8")
 
 [node name="CardImage" type="Sprite2D" parent="." unique_id=467253846]
