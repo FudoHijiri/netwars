@@ -3,12 +3,15 @@ extends Node2D
 const COLLISION_MASK_CARD = 1
 const COLLISION_MASK_CARD_SLOT = 2
 const DEFAULT_CARD_MOVE_SPEED = 0.1
+const DEFAULT_CARD_SCALE = 1
+const DEFAULT_CARD_BIGGER_SCALE = 1.25
 
 var screen_size
 var card_being_dragged
 var drag_offset = Vector2.ZERO
 var is_hovering_on_card 
 var player_hand_reference
+var played_attack_card_this_turn = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,18 +28,23 @@ func _process(delta: float) -> void:
 
 func start_drag(card):
 	card_being_dragged = card
-	card.scale = Vector2(1, 1)
+	card.scale = Vector2(DEFAULT_CARD_SCALE, DEFAULT_CARD_SCALE)
 
 func finish_drag():
-	card_being_dragged.scale = Vector2(1.10, 1.10)
+	card_being_dragged.scale = Vector2(DEFAULT_CARD_BIGGER_SCALE, DEFAULT_CARD_BIGGER_SCALE)
 	var card_slot_found = raycast_check_for_card_slot()
 	if card_slot_found and not card_slot_found.card_in_slot:
-		player_hand_reference.remove_card_from_hand(card_being_dragged)
-		card_being_dragged.position = card_slot_found.position
-		card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true
-		card_slot_found.card_in_slot = true
-	else:
-		player_hand_reference.add_card_to_hand(card_being_dragged, DEFAULT_CARD_MOVE_SPEED)
+		if card_being_dragged.card_type == card_slot_found.card_type:
+			if !played_attack_card_this_turn:
+				played_attack_card_this_turn = true
+				is_hovering_on_card = false
+				player_hand_reference.remove_card_from_hand(card_being_dragged)
+				card_being_dragged.position = card_slot_found.position
+				card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true
+				card_slot_found.card_in_slot = true
+				card_being_dragged = null
+				return
+	player_hand_reference.add_card_to_hand(card_being_dragged, DEFAULT_CARD_MOVE_SPEED)
 	card_being_dragged = null
 	
 
@@ -65,10 +73,10 @@ func on_hovered_off_card(card):
 
 func highlight_card(card, hovered):
 	if hovered:
-		card.scale = Vector2(1.10, 1.10)
+		card.scale = Vector2(DEFAULT_CARD_BIGGER_SCALE, DEFAULT_CARD_BIGGER_SCALE)
 		card.z_index = 2
 	else:
-		card.scale = Vector2(1, 1)
+		card.scale = Vector2(DEFAULT_CARD_SCALE, DEFAULT_CARD_SCALE)
 		card.z_index = 1
 
 func raycast_check_for_card():
@@ -103,3 +111,7 @@ func card_with_highest_z_index(card):
 			highest_z_card = current_card
 			highest_z_index = current_card.z_index
 	return highest_z_card
+
+
+func reset_played_attack():
+	played_attack_card_this_turn = false

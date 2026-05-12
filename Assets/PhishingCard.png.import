@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br3rmtdok3vqx"
-path="res://.godot/imported/Ace Playing Cards Tattoo Design.jpg-db497fde2902a29b8db9683b8480b42b.ctex"
+uid="uid://bvdo85oxo6grb"
+path="res://.godot/imported/PhishingCard.png-52d7ae037c33678cf6aa26bdfc7e99ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Ace Playing Cards Tattoo Design.jpg"
-dest_files=["res://.godot/imported/Ace Playing Cards Tattoo Design.jpg-db497fde2902a29b8db9683b8480b42b.ctex"]
+source_file="res://Assets/PhishingCard.png"
+dest_files=["res://.godot/imported/PhishingCard.png-52d7ae037c33678cf6aa26bdfc7e99ec.ctex"]
 
 [params]
 
