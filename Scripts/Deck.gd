@@ -36,11 +36,22 @@ func draw_card():
 	var new_card = card_scene.instantiate()
 	var card_image_path = str("res://Assets/" + card_drawn_name + "Card.png")
 	new_card.get_node("CardImage").texture = load(card_image_path)
-	new_card.get_node("Attack").text = str(card_database_reference.CARDS[card_drawn_name][0])
-	new_card.get_node("Health").text = str(card_database_reference.CARDS[card_drawn_name][1])
-	new_card.get_node("Energy").text = str(card_database_reference.CARDS[card_drawn_name][2])
-	new_card.card_type = card_database_reference.CARDS[card_drawn_name][3]
 	
+	new_card.card_type = card_database_reference.CARDS[card_drawn_name][3]
+	if new_card.card_type == "Attack":
+		new_card.get_node("Ability").visible = false
+		new_card.attack = card_database_reference.CARDS[card_drawn_name][0]
+		new_card.get_node("Attack").text = str(new_card.attack)
+		new_card.health = card_database_reference.CARDS[card_drawn_name][1]
+		new_card.get_node("Health").text = str(new_card.health)
+		new_card.get_node("Energy").text = str(card_database_reference.CARDS[card_drawn_name][2])
+	else:
+		new_card.get_node("Ability").visible = false
+		new_card.get_node("Attack").visible = false
+		new_card.get_node("Health").visible = false
+		new_card.get_node("Energy").visible = false
+
+
 	$"../CardManager".add_child(new_card)
 	new_card.name = "Card"
 	$"../PlayerHand".add_card_to_hand(new_card, CARD_DRAW_SPEED)

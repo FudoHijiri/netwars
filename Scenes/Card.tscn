@@ -241,5 +241,9 @@ text = "1"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1192014963]
 libraries/ = SubResource("AnimationLibrary_kphy1")
 
+[node name="Ability" type="RichTextLabel" parent="." unique_id=1715987447]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
