@@ -9,19 +9,23 @@ var card_type
 var health
 var attack
 var defeated = false
+var card_id = ""
+var card_name = ""
+var energy_cost = 0
+var effect = ""
+var tooltip = ""
+var faction = ""
+var summoning_sickness = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	get_parent().connect_card_signals(self)
+	get_parent().connect_card_signals(self )
 	position = Vector2(140, 955)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_area_2d_mouse_entered() -> void:
-	emit_signal("hovered", self)
+	emit_signal("hovered", self )
 
 func _on_area_2d_mouse_exited() -> void:
-	emit_signal("hovered_off", self)
+	emit_signal("hovered_off", self )

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cxyjdvwx0x1s"]
+
+[ext_resource type="Script" uid="uid://do1k2khhxyhd" path="res://Scripts/OnlineMenuController.gd" id="1_9xklo"]
+
+[node name="OnlineMenu" type="Node2D"]
+script = ExtResource("1_9xklo")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.1, 0.12, 0.16, 1)
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_left = 960.0
+offset_top = 150.0
+offset_right = 960.0
+offset_bottom = 150.0
+text = "[center][font_size=48]Online Play[/font_size][/center]"
+
+[node name="MatchmakingButton" type="Button" parent="."]
+offset_left = 620.0
+offset_top = 350.0
+offset_right = 820.0
+offset_bottom = 420.0
+text = "Matchmaking"
+
+[node name="HostButton" type="Button" parent="."]
+offset_left = 1050.0
+offset_top = 350.0
+offset_right = 1300.0
+offset_bottom = 420.0
+text = "Host Game"
+
+[node name="LobbyButton" type="Button" parent="."]
+offset_left = 860.0
+offset_top = 500.0
+offset_right = 1060.0
+offset_bottom = 570.0
+text = "Lobby"
+
+[node name="BackButton" type="Button" parent="."]
+offset_left = 860.0
+offset_top = 650.0
+offset_right = 1060.0
+offset_bottom = 720.0
+text = "Back"
+
+[connection signal="pressed" from="MatchmakingButton" to="." method="_on_matchmaking_button_pressed"]
+[connection signal="pressed" from="HostButton" to="." method="_on_host_button_pressed"]
+[connection signal="pressed" from="LobbyButton" to="." method="_on_lobby_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

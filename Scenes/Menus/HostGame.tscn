@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://dcpe6njs4gls"]
+
+[ext_resource type="Script" uid="uid://cqn61xo0v0lr" path="res://Scripts/HostGameController.gd" id="1_wqwut"]
+
+[node name="HostGame" type="Node2D"]
+script = ExtResource("1_wqwut")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.1, 0.12, 0.16, 1)
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_left = 960.0
+offset_top = 100.0
+offset_right = 960.0
+offset_bottom = 100.0
+text = "[center][font_size=48]Host Game[/font_size][/center]"
+
+[node name="GameNameLabel" type="RichTextLabel" parent="."]
+offset_left = 300.0
+offset_top = 250.0
+offset_right = 600.0
+offset_bottom = 310.0
+text = "Game Name:"
+
+[node name="GameNameInput" type="LineEdit" parent="."]
+offset_left = 620.0
+offset_top = 260.0
+offset_right = 900.0
+offset_bottom = 300.0
+text = "My Game"
+
+[node name="DifficultyLabel" type="RichTextLabel" parent="."]
+offset_left = 300.0
+offset_top = 350.0
+offset_right = 600.0
+offset_bottom = 410.0
+text = "Difficulty:"
+
+[node name="EasyButton" type="Button" parent="."]
+offset_left = 620.0
+offset_top = 360.0
+offset_right = 720.0
+offset_bottom = 400.0
+text = "Easy"
+
+[node name="MediumButton" type="Button" parent="."]
+offset_left = 740.0
+offset_top = 360.0
+offset_right = 840.0
+offset_bottom = 400.0
+text = "Medium"
+
+[node name="HardButton" type="Button" parent="."]
+offset_left = 860.0
+offset_top = 360.0
+offset_right = 960.0
+offset_bottom = 400.0
+text = "Hard"
+
+[node name="InviteCodeLabel" type="RichTextLabel" parent="."]
+offset_left = 300.0
+offset_top = 480.0
+offset_right = 600.0
+offset_bottom = 540.0
+text = "Invite Code:"
+
+[node name="InviteCodeDisplay" type="RichTextLabel" parent="."]
+offset_left = 620.0
+offset_top = 480.0
+offset_right = 900.0
+offset_bottom = 540.0
+text = "[center][font_size=28]ABC123[/font_size][/center]"
+
+[node name="StartButton" type="Button" parent="."]
+offset_left = 700.0
+offset_top = 650.0
+offset_right = 900.0
+offset_bottom = 720.0
+text = "Start Game"
+
+[node name="BackButton" type="Button" parent="."]
+offset_left = 1020.0
+offset_top = 650.0
+offset_right = 1220.0
+offset_bottom = 720.0
+text = "Back"
+
+[connection signal="pressed" from="EasyButton" to="." method="_on_easy_button_pressed"]
+[connection signal="pressed" from="MediumButton" to="." method="_on_medium_button_pressed"]
+[connection signal="pressed" from="HardButton" to="." method="_on_hard_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

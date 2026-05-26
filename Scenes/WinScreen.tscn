@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c8qvwd3j1g0n"]
+
+[ext_resource type="Script" uid="uid://b1j3v5blhmhw" path="res://Scripts/WinScreenController.gd" id="1_d8mrq"]
+
+[node name="WinScreen" type="CanvasLayer"]
+script = ExtResource("1_d8mrq")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.8)
+
+[node name="Panel" type="ColorRect" parent="."]
+offset_left = 660.0
+offset_top = 300.0
+offset_right = 1260.0
+offset_bottom = 780.0
+color = Color(0.08, 0.1, 0.15, 1)
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_left = 960.0
+offset_top = 350.0
+offset_right = 960.0
+offset_bottom = 350.0
+text = "[center][font_size=64][color=#00FF00]YOU WON![/color][/font_size][/center]"
+
+[node name="TurnsLabel" type="RichTextLabel" parent="."]
+offset_left = 660.0
+offset_top = 450.0
+offset_right = 1260.0
+offset_bottom = 500.0
+text = "[center]Turns taken: --[/center]"
+
+[node name="DamageLabel" type="RichTextLabel" parent="."]
+offset_left = 660.0
+offset_top = 520.0
+offset_right = 1260.0
+offset_bottom = 570.0
+text = "[center]Opponent damage dealt: -- HP[/center]"
+
+[node name="MenuButton" type="Button" parent="."]
+offset_left = 810.0
+offset_top = 680.0
+offset_right = 1110.0
+offset_bottom = 750.0
+text = "Back to Menu"
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

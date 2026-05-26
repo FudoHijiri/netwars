@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://77r8s7386bco"
+
+[deps]
+
+files=["res://cards.name.translation", "res://cards.faction.translation", "res://cards.type.translation", "res://cards.energy.translation", "res://cards.atk.translation", "res://cards.hp.translation", "res://cards.effect.translation", "res://cards.tooltip.translation"]
+
+source_file="res://cards.csv"
+dest_files=["res://cards.name.translation", "res://cards.faction.translation", "res://cards.type.translation", "res://cards.energy.translation", "res://cards.atk.translation", "res://cards.hp.translation", "res://cards.effect.translation", "res://cards.tooltip.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true
