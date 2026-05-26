@@ -359,6 +359,7 @@ func wait(wait_time):
 
 func end_opponent_turn():
 	$"../Deck".reset_draw()
+	$"../Deck".draw_card()
 	$"../CardManager".reset_played_attack()
 	is_opponents_turn = false
 	$"../EndTurnButton".disabled = false

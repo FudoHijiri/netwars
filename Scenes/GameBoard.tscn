@@ -56,22 +56,22 @@ position = Vector2(1060, 600)
 script = ExtResource("4_lquwl")
 
 [node name="EnemyCardSlot" parent="CardSlots" unique_id=1381052389 instance=ExtResource("5_hptm8")]
-position = Vector2(860, 400)
-
-[node name="EnemyCardSlot2" parent="CardSlots" unique_id=1812755113 instance=ExtResource("5_hptm8")]
-position = Vector2(960, 400)
-
-[node name="EnemyCardSlot3" parent="CardSlots" unique_id=1279634218 instance=ExtResource("5_hptm8")]
-position = Vector2(1060, 400)
-
-[node name="EnemyCardSlot4" parent="CardSlots" unique_id=315728787 instance=ExtResource("5_hptm8")]
 position = Vector2(860, 250)
 
-[node name="EnemyCardSlot5" parent="CardSlots" unique_id=1572877478 instance=ExtResource("5_hptm8")]
+[node name="EnemyCardSlot2" parent="CardSlots" unique_id=1812755113 instance=ExtResource("5_hptm8")]
 position = Vector2(960, 250)
 
-[node name="EnemyCardSlot6" parent="CardSlots" unique_id=964325794 instance=ExtResource("5_hptm8")]
+[node name="EnemyCardSlot3" parent="CardSlots" unique_id=1279634218 instance=ExtResource("5_hptm8")]
 position = Vector2(1060, 250)
+
+[node name="EnemyCardSlot4" parent="CardSlots" unique_id=315728787 instance=ExtResource("5_hptm8")]
+position = Vector2(860, 400)
+
+[node name="EnemyCardSlot5" parent="CardSlots" unique_id=1572877478 instance=ExtResource("5_hptm8")]
+position = Vector2(960, 400)
+
+[node name="EnemyCardSlot6" parent="CardSlots" unique_id=964325794 instance=ExtResource("5_hptm8")]
+position = Vector2(1060, 400)
 
 [node name="PlayerHand" type="Node2D" parent="." unique_id=1411417588]
 script = ExtResource("4_1bvp3")

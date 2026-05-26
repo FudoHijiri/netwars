@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://btr7nhsyst1bt"]
 
 [ext_resource type="Script" uid="uid://b8svusr3liwc0" path="res://Scripts/Card.gd" id="1_hael8"]
-[ext_resource type="Texture2D" uid="uid://ccfmnpjtbwmu7" path="res://Assets/BackCard.png" id="2_3p273"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pnb5n"]
-load_path = "res://.godot/imported/679120758_1394001119155876_3636542792319012177_n.png-07890aeb00e7abe377192a89c5cf6707.ctex"
+[ext_resource type="Texture2D" uid="uid://c5eii105vvi5c" path="res://Assets/Sentinel Back Card.png" id="2_h8wm0"]
+[ext_resource type="Texture2D" uid="uid://d0rvqhgrwouuw" path="res://Assets/Sentinel Agent Card.png" id="3_3m7nw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hael8"]
 size = Vector2(88, 123)
@@ -194,16 +192,18 @@ _data = {
 script = ExtResource("1_hael8")
 
 [node name="CardBackImage" type="Sprite2D" parent="." unique_id=301208043]
-position = Vector2(0.012499809, 0.50000054)
+visible = false
+texture_filter = 1
+position = Vector2(-3.5762787e-07, 0.5000042)
 scale = Vector2(0.23157893, 0.21616869)
-texture = ExtResource("2_3p273")
+texture = ExtResource("2_h8wm0")
 
 [node name="CardImage" type="Sprite2D" parent="." unique_id=467253846]
 z_index = -1
 texture_filter = 1
-position = Vector2(-1, 0.49999812)
+position = Vector2(-4.172325e-07, 0.4999944)
 scale = Vector2(1.4687499, 1.3437499)
-texture = SubResource("CompressedTexture2D_pnb5n")
+texture = ExtResource("3_3m7nw")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=368484808]
 
@@ -213,37 +213,48 @@ shape = SubResource("RectangleShape2D_hael8")
 
 [node name="Energy" type="RichTextLabel" parent="." unique_id=1002796176]
 modulate = Color(1, 1, 1, 0)
-offset_left = -6.0
-offset_top = -62.999996
-offset_right = 14.0
-offset_bottom = -44.11112
+offset_left = -11.0
+offset_top = -58.000004
+offset_right = 16.499998
+offset_bottom = -36.750008
 scale = Vector2(0.8, 0.8)
-text = "1"
+text = "0"
+scroll_active = false
 
 [node name="Health" type="RichTextLabel" parent="." unique_id=804851415]
 modulate = Color(1, 1, 1, 0)
-offset_left = 28.0
-offset_top = -51.0
-offset_right = 48.0
-offset_bottom = -31.0
+offset_left = 21.000002
+offset_top = -47.0
+offset_right = 48.5
+offset_bottom = -25.75
 scale = Vector2(0.8, 0.8)
-text = "1"
+text = "0"
+scroll_active = false
 
 [node name="Attack" type="RichTextLabel" parent="." unique_id=2024573032]
 modulate = Color(1, 1, 1, 0)
-offset_left = -40.0
-offset_top = -50.0
-offset_right = -20.0
-offset_bottom = -30.0
+offset_left = -42.0
+offset_top = -47.0
+offset_right = -15.750002
+offset_bottom = -25.75
 scale = Vector2(0.8, 0.8)
-text = "1"
+text = "0"
+scroll_active = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1192014963]
 libraries/ = SubResource("AnimationLibrary_kphy1")
 
-[node name="Ability" type="RichTextLabel" parent="." unique_id=1715987447]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Name" type="RichTextLabel" parent="." unique_id=687859335]
+offset_left = -33.0
+offset_top = 3.0
+offset_right = 33.0
+offset_bottom = 15.0
+
+[node name="Description" type="RichTextLabel" parent="." unique_id=1715987447]
+offset_left = -36.0
+offset_top = 16.0
+offset_right = 36.0
+offset_bottom = 56.0
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

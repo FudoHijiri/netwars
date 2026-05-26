@@ -2,4 +2,4 @@ extends Node2D
 
 
 var card_in_slot = false
-var card_type = "Attacker"
+var card_type = "AGENT"

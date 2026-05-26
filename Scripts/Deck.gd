@@ -79,11 +79,8 @@ func draw_card():
 	new_card.health = card_data["hp"]
 	new_card.effect = card_data["effect"]
 	new_card.tooltip = card_data["tooltip"]
+	new_card.description = card_data["tooltip"]
 	new_card.faction = card_data["faction"]
-
-	var card_image_path = str("res://Assets/" + card_data["name"] + "Card.png")
-	if ResourceLoader.exists(card_image_path):
-		new_card.get_node("CardImage").texture = load(card_image_path)
 
 	new_card.get_node("Energy").text = str(card_data["energy"])
 

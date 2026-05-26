@@ -9,7 +9,7 @@ const DEFAULT_CARD_BIGGER_SCALE = 1.25
 var screen_size
 var card_being_dragged
 var drag_offset = Vector2.ZERO
-var is_hovering_on_card 
+var is_hovering_on_card
 var player_hand_reference
 var played_attack_card_this_turn = false
 var selected_monster
@@ -24,7 +24,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if card_being_dragged:
 		var mouse_position = get_global_mouse_position()
-		card_being_dragged.position = Vector2(clamp(mouse_position.x, 0, screen_size.x), 
+		card_being_dragged.position = Vector2(clamp(mouse_position.x, 0, screen_size.x),
 		clamp(mouse_position.y, 0, screen_size.y))
 
 func card_clicked(card):
@@ -57,11 +57,11 @@ func start_drag(card):
 	card_being_dragged = card
 	card.scale = Vector2(DEFAULT_CARD_SCALE, DEFAULT_CARD_SCALE)
 
-func finish_drag():	
-	card_being_dragged.scale = Vector2(DEFAULT_CARD_BIGGER_SCALE, DEFAULT_CARD_BIGGER_SCALE)
+func finish_drag():
+	card_being_dragged.scale = Vector2(DEFAULT_CARD_SCALE, DEFAULT_CARD_SCALE)
 	var card_slot_found = raycast_check_for_card_slot()
 	if card_slot_found and not card_slot_found.card_in_slot:
-		if card_being_dragged.card_type == card_slot_found.card_type:
+		if _card_matches_slot(card_being_dragged, card_slot_found):
 			if !played_attack_card_this_turn:
 				played_attack_card_this_turn = true
 				is_hovering_on_card = false
@@ -75,6 +75,13 @@ func finish_drag():
 				return
 	player_hand_reference.add_card_to_hand(card_being_dragged, DEFAULT_CARD_MOVE_SPEED)
 	card_being_dragged = null
+
+func _card_matches_slot(card, slot) -> bool:
+	if card.card_type == "AGENT" and slot.card_type == "AGENT":
+		return true
+	if card.card_type in ["EXPLOIT", "PROTOCOL"] and slot.card_type == "EXPLOIT":
+		return true
+	return false
 	
 
 func unselect_selected_monster():

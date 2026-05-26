@@ -9,4 +9,5 @@ func _ready():
 	$DamageLabel.text = "[center]You took %d damage[/center]" % damage_taken
 
 func _on_menu_button_pressed():
-	MenuManager.go_to_main_menu()
+	var pause_menu = preload("res://Scenes/PauseMenu.tscn").instantiate()
+	get_tree().root.add_child(pause_menu)

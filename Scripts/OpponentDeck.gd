@@ -11,6 +11,7 @@ var difficulty: String = "medium"
 
 func _ready() -> void:
 	_load_cards_from_csv()
+	_load_deck_sprite()
 
 	var sentinel_cards = all_cards.values().filter(func(c): return c["faction"] == "SENTINEL")
 	for card in sentinel_cards:
@@ -20,6 +21,12 @@ func _ready() -> void:
 	$RichTextLabel.text = str(opponent_deck.size())
 	for i in range(STARTING_HAND_SIZE):
 		draw_card()
+
+func _load_deck_sprite() -> void:
+	if has_node("Sprite2D"):
+		var back_card_path = "res://Assets/Sentinel Back Card.png"
+		if ResourceLoader.exists(back_card_path):
+			$Sprite2D.texture = load(back_card_path)
 
 func _load_cards_from_csv() -> void:
 	var file = FileAccess.open(CSV_PATH, FileAccess.READ)
@@ -71,15 +78,23 @@ func draw_card():
 
 	new_card.card_id = card_id
 	new_card.card_name = card_data["name"]
-	var card_image_path = str("res://Assets/" + card_data["name"] + "Card.png")
-	if ResourceLoader.exists(card_image_path):
-		new_card.get_node("CardImage").texture = load(card_image_path)
-	new_card.attack = card_data["atk"]
-	new_card.get_node("Attack").text = str(new_card.attack)
-	new_card.health = card_data["hp"]
-	new_card.get_node("Health").text = str(new_card.health)
-	new_card.get_node("Energy").text = str(card_data["energy"])
 	new_card.card_type = card_data["type"]
+	new_card.faction = card_data["faction"]
+	new_card.energy_cost = card_data["energy"]
+	new_card.attack = card_data["atk"]
+	new_card.health = card_data["hp"]
+	new_card.effect = card_data["effect"]
+	new_card.tooltip = card_data["tooltip"]
+	new_card.description = card_data["tooltip"]
+
+	new_card.get_node("Energy").text = str(card_data["energy"])
+
+	if card_data["type"] == "AGENT":
+		new_card.get_node("Attack").text = str(card_data["atk"])
+		new_card.get_node("Health").text = str(card_data["hp"])
+	else:
+		new_card.get_node("Attack").visible = false
+		new_card.get_node("Health").visible = false
 
 	$"../CardManager".add_child(new_card)
 	new_card.name = "Card"

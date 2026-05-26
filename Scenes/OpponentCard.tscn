@@ -195,7 +195,7 @@ script = ExtResource("1_606hi")
 
 [node name="CardBackImage" type="Sprite2D" parent="." unique_id=301208043]
 position = Vector2(0.012499809, 0.50000054)
-scale = Vector2(0.23157893, 0.21616869)
+scale = Vector2(1.4687499, 1.3437499)
 texture = ExtResource("2_q6tie")
 
 [node name="CardImage" type="Sprite2D" parent="." unique_id=467253846]
