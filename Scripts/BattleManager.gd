@@ -161,8 +161,6 @@ func _play_random_card_easy():
 
 	var tween = get_tree().create_tween()
 	tween.tween_property(card, "position", slot.position, CARD_MOVE_SPEED)
-	var tween2 = get_tree().create_tween()
-	tween2.tween_property(card, "scale", Vector2(CARD_SMALLER_SCALE, CARD_SMALLER_SCALE), CARD_MOVE_SPEED)
 	card.get_node("AnimationPlayer").play("card_flip")
 
 	$"../OpponentHand".remove_card_from_hand(card)

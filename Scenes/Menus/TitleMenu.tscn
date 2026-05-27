@@ -1,38 +1,38 @@
-[gd_scene format=3 uid="uid://c5a4y4r043lh"]
+[gd_scene format=3 uid="uid://dedoim5sty4gc"]
 
-[ext_resource type="Script" uid="uid://dbnrmqrxqzxq" path="res://Scripts/TitleMenuController.gd" id="1_bmp3s"]
+[ext_resource type="Script" uid="uid://cpxhbo8xc80o5" path="res://Scripts/TitleMenuController.gd" id="1_bmp3s"]
 
-[node name="TitleMenu" type="Node2D"]
+[node name="TitleMenu" type="Node2D" unique_id=1097113786]
 script = ExtResource("1_bmp3s")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1588497338]
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.1, 0.12, 0.16, 1)
 
-[node name="Title" type="RichTextLabel" parent="."]
+[node name="Title" type="RichTextLabel" parent="." unique_id=107055526]
+modulate = Color(1, 1, 1, 0)
 offset_left = 960.0
 offset_top = 300.0
 offset_right = 960.0
 offset_bottom = 300.0
 text = "[center][font_size=72]NetWars[/font_size][/center]"
-modulate = Color(1, 1, 1, 0)
 
-[node name="Subtitle" type="RichTextLabel" parent="."]
+[node name="Subtitle" type="RichTextLabel" parent="." unique_id=273923755]
+modulate = Color(1, 1, 1, 0)
 offset_left = 960.0
 offset_top = 500.0
 offset_right = 960.0
 offset_bottom = 500.0
 text = "[center][font_size=32]Cybersecurity Card Battles[/font_size][/center]"
-modulate = Color(1, 1, 1, 0)
 
-[node name="PressAnyKey" type="RichTextLabel" parent="."]
+[node name="PressAnyKey" type="RichTextLabel" parent="." unique_id=176029769]
+modulate = Color(1, 1, 1, 0)
 offset_left = 960.0
 offset_top = 800.0
 offset_right = 960.0
 offset_bottom = 800.0
 text = "[center][font_size=24]Press any key to continue[/font_size][/center]"
-modulate = Color(1, 1, 1, 0)
 
-[node name="BlinkTimer" type="Timer" parent="."]
+[node name="BlinkTimer" type="Timer" parent="." unique_id=1813449336]
 wait_time = 0.5

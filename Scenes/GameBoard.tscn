@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://c48mg3wer8unf" path="res://Scripts/Deck.gd" id="6_6bp64"]
 [ext_resource type="Script" uid="uid://cfiw5p8k0kgda" path="res://Scripts/InputManager.gd" id="7_6bp64"]
 [ext_resource type="Script" uid="uid://bfylyvberppva" path="res://Scripts/OpponentHand.gd" id="7_6iyac"]
-[ext_resource type="Texture2D" uid="uid://ccfmnpjtbwmu7" path="res://Assets/BackCard.png" id="8_344ge"]
+[ext_resource type="Texture2D" uid="uid://ccfmnpjtbwmu7" path="res://Assets/Sentinel Back Card.png" id="8_344ge"]
 [ext_resource type="Script" uid="uid://3woiw3agrvc" path="res://Scripts/BattleManager.gd" id="11_d1ilt"]
 [ext_resource type="Script" uid="uid://b4uwrlu4cg2e" path="res://Scripts/OpponentDeck.gd" id="11_fdnlq"]
 [ext_resource type="Texture2D" uid="uid://d33p1sgg8in6y" path="res://Assets/CardSlot.png" id="14_jkdf5"]

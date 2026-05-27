@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://cbqsw1ngsgy06"]
 
 [ext_resource type="Script" uid="uid://bl6q7doeqol8q" path="res://Scripts/OpponentCard.gd" id="1_606hi"]
-[ext_resource type="Texture2D" uid="uid://ccfmnpjtbwmu7" path="res://Assets/BackCard.png" id="2_q6tie"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pnb5n"]
-load_path = "res://.godot/imported/679120758_1394001119155876_3636542792319012177_n.png-07890aeb00e7abe377192a89c5cf6707.ctex"
+[ext_resource type="Texture2D" uid="uid://beguo24it82cq" path="res://Assets/Void Back Card.png" id="2_qrb68"]
+[ext_resource type="Texture2D" uid="uid://cnki306wwywji" path="res://Assets/Void Agent Card.png" id="3_r8ami"]
 
 [sub_resource type="Animation" id="Animation_h8wm0"]
 length = 0.001
@@ -188,47 +186,48 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mv32a"]
-size = Vector2(88, 122)
+size = Vector2(86, 123)
 
 [node name="Card" type="Node2D" unique_id=1932113617]
 script = ExtResource("1_606hi")
 
 [node name="CardBackImage" type="Sprite2D" parent="." unique_id=301208043]
-position = Vector2(0.012499809, 0.50000054)
-scale = Vector2(1.4687499, 1.3437499)
-texture = ExtResource("2_q6tie")
+texture_filter = 1
+position = Vector2(3.2782555e-07, -1.1622906e-06)
+scale = Vector2(0.23157893, 0.21616869)
+texture = ExtResource("2_qrb68")
 
 [node name="CardImage" type="Sprite2D" parent="." unique_id=467253846]
 z_index = -1
 texture_filter = 1
-position = Vector2(-1, 0.49999812)
+position = Vector2(-2.9802322e-06, -2.0861626e-06)
 scale = Vector2(1.4687499, 1.3437499)
-texture = SubResource("CompressedTexture2D_pnb5n")
+texture = ExtResource("3_r8ami")
 
 [node name="Energy" type="RichTextLabel" parent="." unique_id=1002796176]
 modulate = Color(1, 1, 1, 0)
-offset_left = -6.0
-offset_top = -62.999996
-offset_right = 14.0
-offset_bottom = -44.11112
+offset_left = -12.0
+offset_top = -61.000004
+offset_right = 15.499996
+offset_bottom = -39.750008
 scale = Vector2(0.8, 0.8)
-text = "1"
+text = "0"
 
 [node name="Health" type="RichTextLabel" parent="." unique_id=804851415]
 modulate = Color(1, 1, 1, 0)
-offset_left = 28.0
-offset_top = -51.0
-offset_right = 48.0
-offset_bottom = -31.0
+offset_left = 21.000002
+offset_top = -49.0
+offset_right = 49.75
+offset_bottom = -26.500004
 scale = Vector2(0.8, 0.8)
 text = "1"
 
 [node name="Attack" type="RichTextLabel" parent="." unique_id=2024573032]
 modulate = Color(1, 1, 1, 0)
-offset_left = -40.0
-offset_top = -50.0
-offset_right = -20.0
-offset_bottom = -30.0
+offset_left = -46.0
+offset_top = -49.0
+offset_right = -17.250002
+offset_bottom = -26.500004
 scale = Vector2(0.8, 0.8)
 text = "1"
 
@@ -240,5 +239,4 @@ collision_layer = 8
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1589072060]
-position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_mv32a")

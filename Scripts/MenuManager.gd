@@ -1,4 +1,4 @@
-extends Node
+extends CanvasLayer
 
 signal menu_changed(menu_name: String)
 
@@ -10,6 +10,8 @@ var game_difficulty: String = ""
 const MENU_CONTAINER_PATH = "MenuContainer"
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	layer = 100
 	var container = Node.new()
 	container.name = MENU_CONTAINER_PATH
 	add_child(container)
@@ -30,7 +32,12 @@ func go_to_title_menu() -> void:
 	load_menu("res://Scenes/Menus/TitleMenu.tscn")
 
 func go_to_main_menu() -> void:
+	if get_tree().current_scene and get_tree().current_scene.scene_file_path == "res://Scenes/GameBoard.tscn":
+		get_tree().change_scene_to_file("res://Scenes/Menus/TitleMenu.tscn")
 	load_menu("res://Scenes/Menus/MainMenu.tscn")
+
+func go_to_settings() -> void:
+	load_menu("res://Scenes/Menus/SettingsMenu.tscn")
 
 func go_to_play_selection() -> void:
 	load_menu("res://Scenes/Menus/PlaySelectionMenu.tscn")

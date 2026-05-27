@@ -1,26 +1,27 @@
 [gd_scene format=3 uid="uid://dqk7rrqo3v0de"]
 
-[ext_resource type="Texture2D" uid="uid://ccfmnpjtbwmu7" path="res://Assets/Void Back Card.png" id="1_57cf8"]
+[ext_resource type="Texture2D" uid="uid://beguo24it82cq" path="res://Assets/Void Back Card.png" id="1_57cf8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0g7pp"]
-size = Vector2(88, 124)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57cf8"]
+size = Vector2(86, 123)
 
 [node name="Deck" type="Node2D" unique_id=820171580]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2031185877]
 z_index = -2
-position = Vector2(3.8146973e-06, -1.9073486e-06)
-scale = Vector2(0.23157898, 0.21836564)
+texture_filter = 1
+position = Vector2(-4.7683807e-07, 3.5365424e-06)
+scale = Vector2(1.4687499, 1.3333334)
 texture = ExtResource("1_57cf8")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1170194740]
-collision_layer = 4
-collision_mask = 4
+[node name="Area2D2" type="Area2D" parent="." unique_id=713039292]
+collision_layer = 8
+collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2137436238]
-shape = SubResource("RectangleShape2D_0g7pp")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=2083770729]
+shape = SubResource("RectangleShape2D_57cf8")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1476843498]
+[node name="RichTextLabel" type="RichTextLabel" parent="Area2D2" unique_id=1476843498]
 z_index = -2
 offset_left = -4.0
 offset_top = -13.0

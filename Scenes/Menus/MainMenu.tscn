@@ -1,45 +1,45 @@
-[gd_scene format=3 uid="uid://dgvdhh1nym8y"]
+[gd_scene format=3 uid="uid://b8iud57k1jlfx"]
 
-[ext_resource type="Script" uid="uid://ba8yqnj77bdo" path="res://Scripts/MainMenuController.gd" id="1_oqxoj"]
+[ext_resource type="Script" uid="uid://dfr4rm1444me8" path="res://Scripts/MainMenuController.gd" id="1_oqxoj"]
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="Node2D" unique_id=1031687561]
 script = ExtResource("1_oqxoj")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=583521881]
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.1, 0.12, 0.16, 1)
 
-[node name="Title" type="RichTextLabel" parent="."]
+[node name="Title" type="RichTextLabel" parent="." unique_id=919848884]
 offset_left = 960.0
 offset_top = 150.0
 offset_right = 960.0
 offset_bottom = 150.0
 text = "[center][font_size=64]NetWars[/font_size][/center]"
 
-[node name="PlayButton" type="Button" parent="."]
+[node name="PlayButton" type="Button" parent="." unique_id=1599146143]
+modulate = Color(1, 1, 1, 0)
 offset_left = 860.0
 offset_top = 400.0
 offset_right = 1060.0
 offset_bottom = 470.0
 text = "Play"
-modulate = Color(1, 1, 1, 0)
 
-[node name="SettingsButton" type="Button" parent="."]
+[node name="SettingsButton" type="Button" parent="." unique_id=47998057]
+modulate = Color(1, 1, 1, 0)
 offset_left = 860.0
 offset_top = 520.0
 offset_right = 1060.0
 offset_bottom = 590.0
 text = "Settings"
-modulate = Color(1, 1, 1, 0)
 
-[node name="ExitButton" type="Button" parent="."]
+[node name="ExitButton" type="Button" parent="." unique_id=807578873]
+modulate = Color(1, 1, 1, 0)
 offset_left = 860.0
 offset_top = 640.0
 offset_right = 1060.0
 offset_bottom = 710.0
 text = "Exit"
-modulate = Color(1, 1, 1, 0)
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

@@ -10,6 +10,12 @@ func _ready():
 		_setup_online_game(difficulty)
 
 	$BattleManager.game_ended.connect(_on_game_ended)
+	set_process_unhandled_input(true)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		_open_pause_menu()
+		get_tree().root.set_input_as_handled()
 
 func _setup_offline_game(difficulty: String):
 	$OpponentDeck.set_difficulty(difficulty)
@@ -30,3 +36,7 @@ func _on_game_ended(winner: String):
 
 func _on_back_to_menu_pressed():
 	MenuManager.go_to_main_menu()
+
+func _open_pause_menu() -> void:
+	var pause_menu = preload("res://Scenes/PauseMenu.tscn").instantiate()
+	get_tree().root.add_child(pause_menu)

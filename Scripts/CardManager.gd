@@ -55,10 +55,8 @@ func select_card_for_battle(card):
 
 func start_drag(card):
 	card_being_dragged = card
-	card.scale = Vector2(DEFAULT_CARD_SCALE, DEFAULT_CARD_SCALE)
 
 func finish_drag():
-	card_being_dragged.scale = Vector2(DEFAULT_CARD_SCALE, DEFAULT_CARD_SCALE)
 	var card_slot_found = raycast_check_for_card_slot()
 	if card_slot_found and not card_slot_found.card_in_slot:
 		if _card_matches_slot(card_being_dragged, card_slot_found):
@@ -117,10 +115,8 @@ func on_hovered_off_card(card):
 
 func highlight_card(card, hovered):
 	if hovered:
-		card.scale = Vector2(DEFAULT_CARD_BIGGER_SCALE, DEFAULT_CARD_BIGGER_SCALE)
 		card.z_index = 2
 	else:
-		card.scale = Vector2(DEFAULT_CARD_SCALE, DEFAULT_CARD_SCALE)
 		card.z_index = 1
 
 func raycast_check_for_card():

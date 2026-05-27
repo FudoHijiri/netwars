@@ -1,44 +1,44 @@
-[gd_scene format=3 uid="uid://qlwa6bvf7f2x"]
+[gd_scene format=3 uid="uid://cud1nqs5vh0h3"]
 
-[ext_resource type="Script" uid="uid://d2w8e8xnw49l" path="res://Scripts/OfflineMenuController.gd" id="1_12uql"]
+[ext_resource type="Script" uid="uid://gide5na6wl6d" path="res://Scripts/OfflineMenuController.gd" id="1_12uql"]
 
-[node name="OfflineMenu" type="Node2D"]
+[node name="OfflineMenu" type="Node2D" unique_id=2137069684]
 script = ExtResource("1_12uql")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1285593642]
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.1, 0.12, 0.16, 1)
 
-[node name="Title" type="RichTextLabel" parent="."]
+[node name="Title" type="RichTextLabel" parent="." unique_id=1490504964]
 offset_left = 960.0
 offset_top = 150.0
 offset_right = 960.0
 offset_bottom = 150.0
 text = "[center][font_size=48]Select Difficulty[/font_size][/center]"
 
-[node name="EasyButton" type="Button" parent="."]
+[node name="EasyButton" type="Button" parent="." unique_id=1002343703]
 offset_left = 620.0
 offset_top = 400.0
 offset_right = 780.0
 offset_bottom = 470.0
 text = "Easy"
 
-[node name="MediumButton" type="Button" parent="."]
+[node name="MediumButton" type="Button" parent="." unique_id=1882052897]
 offset_left = 870.0
 offset_top = 400.0
 offset_right = 1050.0
 offset_bottom = 470.0
 text = "Medium"
 
-[node name="HardButton" type="Button" parent="."]
+[node name="HardButton" type="Button" parent="." unique_id=554330392]
 offset_left = 1140.0
 offset_top = 400.0
 offset_right = 1300.0
 offset_bottom = 470.0
 text = "Hard"
 
-[node name="BackButton" type="Button" parent="."]
+[node name="BackButton" type="Button" parent="." unique_id=1659414601]
 offset_left = 860.0
 offset_top = 650.0
 offset_right = 1060.0

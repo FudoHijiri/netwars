@@ -1,30 +1,30 @@
-[gd_scene format=3 uid="uid://dd4hlkn7nxjb"]
+[gd_scene format=3 uid="uid://dq8xm2kj4ik6s"]
 
-[ext_resource type="Script" uid="uid://bg1vn84lfzr3" path="res://Scripts/SettingsMenuController.gd" id="1_5xkwf"]
+[ext_resource type="Script" uid="uid://bamk6cg1y028i" path="res://Scripts/SettingsMenuController.gd" id="1_5xkwf"]
 
-[node name="SettingsMenu" type="Node2D"]
+[node name="SettingsMenu" type="Node2D" unique_id=1587280369]
 script = ExtResource("1_5xkwf")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1496460839]
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.1, 0.12, 0.16, 1)
 
-[node name="Title" type="RichTextLabel" parent="."]
+[node name="Title" type="RichTextLabel" parent="." unique_id=12755630]
 offset_left = 960.0
 offset_top = 150.0
 offset_right = 960.0
 offset_bottom = 150.0
 text = "[center][font_size=48]Settings[/font_size][/center]"
 
-[node name="ComingSoonLabel" type="RichTextLabel" parent="."]
+[node name="ComingSoonLabel" type="RichTextLabel" parent="." unique_id=278407323]
 offset_left = 960.0
 offset_top = 400.0
 offset_right = 960.0
 offset_bottom = 400.0
 text = "[center][font_size=32]Coming Soon[/font_size][/center]"
 
-[node name="BackButton" type="Button" parent="."]
+[node name="BackButton" type="Button" parent="." unique_id=1431229155]
 offset_left = 860.0
 offset_top = 750.0
 offset_right = 1060.0

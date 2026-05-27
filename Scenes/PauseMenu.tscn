@@ -3,40 +3,48 @@
 [ext_resource type="Script" uid="uid://d88iusj8qf3bv" path="res://Scripts/PauseMenuController.gd" id="1_6m5ml"]
 
 [node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_6m5ml")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-anchors_left = 0.0
-anchors_top = 0.0
-anchors_right = 1.0
-anchors_bottom = 1.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color(0, 0, 0, 0.7)
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-anchors_left = 0.5
-anchors_top = 0.5
-anchors_right = 0.5
-anchors_bottom = 0.5
-offset_left = -150.0
-offset_top = -120.0
-offset_right = 150.0
-offset_bottom = 120.0
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(300, 250)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer"]
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 292.0
-margin_bottom = 232.0
+margin_bottom = 242.0
 
-[node name="TitleLabel" type="Label" parent="PanelContainer/VBoxContainer"]
+[node name="TitleLabel" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer"]
 text = "Main Menu"
-alignment = 1
+horizontal_alignment = 1
+custom_minimum_size = Vector2(0, 40)
 
-[node name="ResumeButton" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="ResumeButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer"]
 text = "Resume"
+custom_minimum_size = Vector2(0, 40)
 
-[node name="SettingsButton" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="SettingsButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer"]
 text = "Settings"
+custom_minimum_size = Vector2(0, 40)
 
-[node name="QuitButton" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer"]
 text = "Quit Match"
+custom_minimum_size = Vector2(0, 40)
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

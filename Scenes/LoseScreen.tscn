@@ -43,6 +43,6 @@ offset_left = 810.0
 offset_top = 680.0
 offset_right = 1110.0
 offset_bottom = 750.0
-text = "Back to Menu"
+text = "Main Menu"
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d0rvqhgrwouuw" path="res://Assets/Sentinel Agent Card.png" id="3_3m7nw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hael8"]
-size = Vector2(88, 123)
+size = Vector2(86, 122)
 
 [sub_resource type="Animation" id="Animation_h8wm0"]
 length = 0.001
@@ -192,23 +192,21 @@ _data = {
 script = ExtResource("1_hael8")
 
 [node name="CardBackImage" type="Sprite2D" parent="." unique_id=301208043]
-visible = false
 texture_filter = 1
-position = Vector2(-3.5762787e-07, 0.5000042)
+position = Vector2(-1.0842022e-19, 0)
 scale = Vector2(0.23157893, 0.21616869)
 texture = ExtResource("2_h8wm0")
 
 [node name="CardImage" type="Sprite2D" parent="." unique_id=467253846]
 z_index = -1
 texture_filter = 1
-position = Vector2(-4.172325e-07, 0.4999944)
+position = Vector2(0, -1)
 scale = Vector2(1.4687499, 1.3437499)
 texture = ExtResource("3_3m7nw")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=368484808]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=648575643]
-position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_hael8")
 
 [node name="Energy" type="RichTextLabel" parent="." unique_id=1002796176]

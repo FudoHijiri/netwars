@@ -11,7 +11,7 @@ func _on_play_button_pressed():
 	MenuManager.go_to_play_selection()
 
 func _on_settings_button_pressed():
-	MenuManager.load_menu("res://Scenes/Menus/SettingsMenu.tscn")
+	MenuManager.go_to_settings()
 
 func _on_exit_button_pressed():
 	MenuManager.exit_game()
