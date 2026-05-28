@@ -17,8 +17,8 @@ func _ready() -> void:
 		player_deck.append(card["id"])
 
 	player_deck.shuffle()
-	if has_node("RichTextLabel"):
-		$RichTextLabel.text = str(player_deck.size())
+	if has_node("Area2D2/RichTextLabel"):
+		$Area2D2/RichTextLabel.text = str(player_deck.size())
 
 	for i in range(STARTING_HAND_SIZE):
 		draw_card()
@@ -63,11 +63,11 @@ func draw_card():
 			$Area2D/CollisionShape2D.disabled = true
 		if has_node("Sprite2D"):
 			$Sprite2D.visible = false
-		if has_node("RichTextLabel"):
-			$RichTextLabel.visible = false
+		if has_node("Area2D2/RichTextLabel"):
+			$Area2D2/RichTextLabel.visible = false
 
-	if has_node("RichTextLabel"):
-		$RichTextLabel.text = str(player_deck.size())
+	if has_node("Area2D2/RichTextLabel"):
+		$Area2D2/RichTextLabel.text = str(player_deck.size())
 
 	if not all_cards.has(card_id):
 		return

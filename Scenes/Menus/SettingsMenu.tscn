@@ -12,17 +12,54 @@ color = Color(0.1, 0.12, 0.16, 1)
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=12755630]
 offset_left = 960.0
-offset_top = 150.0
+offset_top = 100.0
 offset_right = 960.0
-offset_bottom = 150.0
+offset_bottom = 100.0
 text = "[center][font_size=48]Settings[/font_size][/center]"
 
-[node name="ComingSoonLabel" type="RichTextLabel" parent="." unique_id=278407323]
-offset_left = 960.0
-offset_top = 400.0
+[node name="VolumeLabel" type="RichTextLabel" parent="." unique_id=278407323]
+offset_left = 700.0
+offset_top = 300.0
+offset_right = 850.0
+offset_bottom = 340.0
+text = "[font_size=24]Master Volume[/font_size]"
+
+[node name="VolumeSlider" type="HSlider" parent="." unique_id=1431229156]
+offset_left = 700.0
+offset_top = 350.0
+offset_right = 1200.0
+offset_bottom = 380.0
+min_value = 0.0
+max_value = 100.0
+value = 100.0
+
+[node name="DifficultyLabel" type="RichTextLabel" parent="." unique_id=278407324]
+offset_left = 700.0
+offset_top = 430.0
+offset_right = 850.0
+offset_bottom = 470.0
+text = "[font_size=24]Default Difficulty[/font_size]"
+
+[node name="EasyButton" type="Button" parent="." unique_id=1431229157]
+offset_left = 700.0
+offset_top = 480.0
+offset_right = 820.0
+offset_bottom = 530.0
+text = "Easy"
+
+[node name="MediumButton" type="Button" parent="." unique_id=1431229158]
+offset_left = 840.0
+offset_top = 480.0
 offset_right = 960.0
-offset_bottom = 400.0
-text = "[center][font_size=32]Coming Soon[/font_size][/center]"
+offset_bottom = 530.0
+text = "Medium"
+
+[node name="HardButton" type="Button" parent="." unique_id=1431229159]
+offset_left = 980.0
+offset_top = 480.0
+offset_right = 1100.0
+offset_bottom = 530.0
+text = "Hard"
 
 [node name="BackButton" type="Button" parent="." unique_id=1431229155]
 offset_left = 860.0
@@ -31,4 +68,8 @@ offset_right = 1060.0
 offset_bottom = 820.0
 text = "Back"
 
+[connection signal="pressed" from="VolumeSlider" to="." method="_on_volume_changed"]
+[connection signal="pressed" from="EasyButton" to="." method="_on_easy_difficulty"]
+[connection signal="pressed" from="MediumButton" to="." method="_on_medium_difficulty"]
+[connection signal="pressed" from="HardButton" to="." method="_on_hard_difficulty"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
