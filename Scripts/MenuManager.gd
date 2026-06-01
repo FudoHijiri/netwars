@@ -31,11 +31,6 @@ func load_menu(menu_path: String) -> void:
 func go_to_title_menu() -> void:
 	load_menu("res://Scenes/Menus/TitleMenu.tscn")
 
-func go_to_main_menu() -> void:
-	if get_tree().current_scene and get_tree().current_scene.scene_file_path == "res://Scenes/GameBoard.tscn":
-		get_tree().change_scene_to_file("res://Scenes/Menus/TitleMenu.tscn")
-	load_menu("res://Scenes/Menus/MainMenu.tscn")
-
 func go_to_settings() -> void:
 	load_menu("res://Scenes/Menus/SettingsMenu.tscn")
 
@@ -57,6 +52,9 @@ func start_game(mode: String, difficulty: String = "") -> void:
 		current_menu_node = null
 
 	get_tree().change_scene_to_file("res://Scenes/GameBoard.tscn")
+
+func go_to_login() -> void:
+	load_menu("res://Scenes/Menus/LoginRegister.tscn")
 
 func exit_game() -> void:
 	get_tree().quit()

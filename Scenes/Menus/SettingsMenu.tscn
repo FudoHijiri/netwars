@@ -22,15 +22,13 @@ offset_left = 700.0
 offset_top = 300.0
 offset_right = 850.0
 offset_bottom = 340.0
-text = "[font_size=24]Master Volume[/font_size]"
+text = "Master Volume"
 
 [node name="VolumeSlider" type="HSlider" parent="." unique_id=1431229156]
 offset_left = 700.0
 offset_top = 350.0
 offset_right = 1200.0
 offset_bottom = 380.0
-min_value = 0.0
-max_value = 100.0
 value = 100.0
 
 [node name="DifficultyLabel" type="RichTextLabel" parent="." unique_id=278407324]
@@ -38,7 +36,7 @@ offset_left = 700.0
 offset_top = 430.0
 offset_right = 850.0
 offset_bottom = 470.0
-text = "[font_size=24]Default Difficulty[/font_size]"
+text = "Default Difficulty"
 
 [node name="EasyButton" type="Button" parent="." unique_id=1431229157]
 offset_left = 700.0
@@ -68,7 +66,6 @@ offset_right = 1060.0
 offset_bottom = 820.0
 text = "Back"
 
-[connection signal="pressed" from="VolumeSlider" to="." method="_on_volume_changed"]
 [connection signal="pressed" from="EasyButton" to="." method="_on_easy_difficulty"]
 [connection signal="pressed" from="MediumButton" to="." method="_on_medium_difficulty"]
 [connection signal="pressed" from="HardButton" to="." method="_on_hard_difficulty"]

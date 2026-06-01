@@ -193,7 +193,7 @@ script = ExtResource("1_hael8")
 
 [node name="CardBackImage" type="Sprite2D" parent="." unique_id=301208043]
 texture_filter = 1
-position = Vector2(-1.0842022e-19, 0)
+position = Vector2(-0.50000316, -0.50000703)
 scale = Vector2(0.23157893, 0.21616869)
 texture = ExtResource("2_h8wm0")
 

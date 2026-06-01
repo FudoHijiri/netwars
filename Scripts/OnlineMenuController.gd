@@ -1,8 +1,5 @@
 extends Node2D
 
-func _on_matchmaking_button_pressed():
-	MenuManager.load_menu("res://Scenes/Menus/MatchmakingQueue.tscn")
-
 func _on_host_button_pressed():
 	MenuManager.load_menu("res://Scenes/Menus/HostGame.tscn")
 

@@ -23,7 +23,7 @@ offset_left = 860.0
 offset_top = 400.0
 offset_right = 1060.0
 offset_bottom = 470.0
-text = "Play"
+text = "Resume"
 
 [node name="SettingsButton" type="Button" parent="." unique_id=47998057]
 modulate = Color(1, 1, 1, 0)
@@ -39,7 +39,7 @@ offset_left = 860.0
 offset_top = 640.0
 offset_right = 1060.0
 offset_bottom = 710.0
-text = "Exit"
+text = "Quit Match"
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]

@@ -1,44 +1,44 @@
-[gd_scene format=3 uid="uid://d1xfjyybk6ph"]
+[gd_scene format=3 uid="uid://bmlr1wi8mswj5"]
 
-[ext_resource type="Script" uid="uid://damih5w18fqk" path="res://Scripts/MatchmakingQueueController.gd" id="1_72kge"]
+[ext_resource type="Script" uid="uid://cinevep5hv2iy" path="res://Scripts/MatchmakingQueueController.gd" id="1_72kge"]
 
-[node name="MatchmakingQueue" type="Node2D"]
+[node name="MatchmakingQueue" type="Node2D" unique_id=506707821]
 script = ExtResource("1_72kge")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1403285440]
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.1, 0.12, 0.16, 1)
 
-[node name="Title" type="RichTextLabel" parent="."]
+[node name="Title" type="RichTextLabel" parent="." unique_id=1146944914]
 offset_left = 960.0
 offset_top = 200.0
 offset_right = 960.0
 offset_bottom = 200.0
 text = "[center][font_size=48]Finding Opponent...[/font_size][/center]"
 
-[node name="Spinner" type="RichTextLabel" parent="."]
+[node name="Spinner" type="RichTextLabel" parent="." unique_id=1399815586]
 offset_left = 960.0
 offset_top = 400.0
 offset_right = 960.0
 offset_bottom = 400.0
 text = "[center][font_size=64]⟳[/font_size][/center]"
 
-[node name="StatusLabel" type="RichTextLabel" parent="."]
+[node name="StatusLabel" type="RichTextLabel" parent="." unique_id=1679601041]
 offset_left = 960.0
 offset_top = 550.0
 offset_right = 960.0
 offset_bottom = 550.0
 text = "[center][font_size=24]Searching for players...[/font_size][/center]"
 
-[node name="CancelButton" type="Button" parent="."]
+[node name="CancelButton" type="Button" parent="." unique_id=1726421811]
 offset_left = 860.0
 offset_top = 750.0
 offset_right = 1060.0
 offset_bottom = 820.0
 text = "Cancel"
 
-[node name="SearchTimer" type="Timer" parent="."]
+[node name="SearchTimer" type="Timer" parent="." unique_id=1831208048]
 wait_time = 3.0
 one_shot = true
 

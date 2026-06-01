@@ -35,7 +35,7 @@ func _on_game_ended(winner: String):
 		get_tree().root.add_child(lose_screen)
 
 func _on_back_to_menu_pressed():
-	MenuManager.go_to_main_menu()
+	_open_pause_menu()
 
 func _open_pause_menu() -> void:
 	var pause_menu = preload("res://Scenes/PauseMenu.tscn").instantiate()

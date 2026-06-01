@@ -1,0 +1,158 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/Auth/LoginRegisterController.gd" id="1_abc12"]
+
+[node name="LoginRegister" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_abc12")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.1, 0.12, 0.16, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -300.0
+offset_right = 200.0
+offset_bottom = 300.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(400, 600)
+
+[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "< Back"
+custom_minimum_size = Vector2(0, 40)
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 10)
+
+[node name="TabContainer" type="TabContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 500)
+tab_alignment = 1
+
+[node name="Login" type="VBoxContainer" parent="CenterContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+tab_title = "Login"
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer/TabContainer/Login"]
+layout_mode = 2
+text = "Login"
+horizontal_alignment = 1
+custom_minimum_size = Vector2(0, 50)
+
+[node name="EmailLabel" type="Label" parent="CenterContainer/VBoxContainer/TabContainer/Login"]
+layout_mode = 2
+text = "Email"
+custom_minimum_size = Vector2(0, 20)
+
+[node name="EmailInput" type="LineEdit" parent="CenterContainer/VBoxContainer/TabContainer/Login"]
+layout_mode = 2
+placeholder_text = "Enter your email"
+custom_minimum_size = Vector2(0, 40)
+
+[node name="PasswordLabel" type="Label" parent="CenterContainer/VBoxContainer/TabContainer/Login"]
+layout_mode = 2
+text = "Password"
+custom_minimum_size = Vector2(0, 20)
+
+[node name="PasswordInput" type="LineEdit" parent="CenterContainer/VBoxContainer/TabContainer/Login"]
+layout_mode = 2
+placeholder_text = "Enter your password"
+secret = true
+custom_minimum_size = Vector2(0, 40)
+
+[node name="LoginButton" type="Button" parent="CenterContainer/VBoxContainer/TabContainer/Login"]
+layout_mode = 2
+text = "Login"
+custom_minimum_size = Vector2(0, 40)
+
+[node name="LoginErrorLabel" type="Label" parent="CenterContainer/VBoxContainer/TabContainer/Login"]
+layout_mode = 2
+text = ""
+custom_modulate = Color(1, 0, 0, 1)
+horizontal_alignment = 1
+custom_minimum_size = Vector2(0, 30)
+
+[node name="Register" type="VBoxContainer" parent="CenterContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+tab_title = "Register"
+
+[node name="Title2" type="Label" parent="CenterContainer/VBoxContainer/TabContainer/Register"]
+layout_mode = 2
+text = "Create Account"
+horizontal_alignment = 1
+custom_minimum_size = Vector2(0, 50)
+
+[node name="UsernameLabel" type="Label" parent="CenterContainer/VBoxContainer/TabContainer/Register"]
+layout_mode = 2
+text = "Username"
+custom_minimum_size = Vector2(0, 20)
+
+[node name="UsernameInput" type="LineEdit" parent="CenterContainer/VBoxContainer/TabContainer/Register"]
+layout_mode = 2
+placeholder_text = "Enter username"
+custom_minimum_size = Vector2(0, 40)
+
+[node name="RegEmailLabel" type="Label" parent="CenterContainer/VBoxContainer/TabContainer/Register"]
+layout_mode = 2
+text = "Email"
+custom_minimum_size = Vector2(0, 20)
+
+[node name="RegEmailInput" type="LineEdit" parent="CenterContainer/VBoxContainer/TabContainer/Register"]
+layout_mode = 2
+placeholder_text = "Enter your email"
+custom_minimum_size = Vector2(0, 40)
+
+[node name="RegPasswordLabel" type="Label" parent="CenterContainer/VBoxContainer/TabContainer/Register"]
+layout_mode = 2
+text = "Password"
+custom_minimum_size = Vector2(0, 20)
+
+[node name="RegPasswordInput" type="LineEdit" parent="CenterContainer/VBoxContainer/TabContainer/Register"]
+layout_mode = 2
+placeholder_text = "Enter your password"
+secret = true
+custom_minimum_size = Vector2(0, 40)
+
+[node name="ConfirmPasswordLabel" type="Label" parent="CenterContainer/VBoxContainer/TabContainer/Register"]
+layout_mode = 2
+text = "Confirm Password"
+custom_minimum_size = Vector2(0, 20)
+
+[node name="ConfirmPasswordInput" type="LineEdit" parent="CenterContainer/VBoxContainer/TabContainer/Register"]
+layout_mode = 2
+placeholder_text = "Confirm your password"
+secret = true
+custom_minimum_size = Vector2(0, 40)
+
+[node name="RegisterButton" type="Button" parent="CenterContainer/VBoxContainer/TabContainer/Register"]
+layout_mode = 2
+text = "Create Account"
+custom_minimum_size = Vector2(0, 40)
+
+[node name="RegErrorLabel" type="Label" parent="CenterContainer/VBoxContainer/TabContainer/Register"]
+layout_mode = 2
+text = ""
+custom_modulate = Color(1, 0, 0, 1)
+horizontal_alignment = 1
+custom_minimum_size = Vector2(0, 30)
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/TabContainer/Login/LoginButton" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/TabContainer/Register/RegisterButton" to="." method="_on_register_pressed"]

@@ -45,6 +45,57 @@ custom_minimum_size = Vector2(0, 40)
 text = "Quit Match"
 custom_minimum_size = Vector2(0, 40)
 
+[node name="SettingsPanel" type="PanelContainer" parent="CenterContainer"]
+visible = false
+custom_minimum_size = Vector2(300, 250)
+
+[node name="SettingsVBox" type="VBoxContainer" parent="CenterContainer/SettingsPanel"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 292.0
+margin_bottom = 242.0
+
+[node name="SettingsTitle" type="Label" parent="CenterContainer/SettingsPanel/SettingsVBox"]
+text = "Settings"
+horizontal_alignment = 1
+custom_minimum_size = Vector2(0, 40)
+
+[node name="VolumeLabel" type="Label" parent="CenterContainer/SettingsPanel/SettingsVBox"]
+text = "Master Volume"
+custom_minimum_size = Vector2(0, 20)
+
+[node name="VolumeSlider" type="HSlider" parent="CenterContainer/SettingsPanel/SettingsVBox"]
+value = 100.0
+custom_minimum_size = Vector2(0, 30)
+
+[node name="DifficultyLabel" type="Label" parent="CenterContainer/SettingsPanel/SettingsVBox"]
+text = "Difficulty"
+custom_minimum_size = Vector2(0, 20)
+
+[node name="DifficultyHBox" type="HBoxContainer" parent="CenterContainer/SettingsPanel/SettingsVBox"]
+custom_minimum_size = Vector2(0, 40)
+
+[node name="EasyButton" type="Button" parent="CenterContainer/SettingsPanel/SettingsVBox/DifficultyHBox"]
+text = "Easy"
+custom_minimum_size = Vector2(0, 40)
+
+[node name="MediumButton" type="Button" parent="CenterContainer/SettingsPanel/SettingsVBox/DifficultyHBox"]
+text = "Medium"
+custom_minimum_size = Vector2(0, 40)
+
+[node name="HardButton" type="Button" parent="CenterContainer/SettingsPanel/SettingsVBox/DifficultyHBox"]
+text = "Hard"
+custom_minimum_size = Vector2(0, 40)
+
+[node name="BackSettingsButton" type="Button" parent="CenterContainer/SettingsPanel/SettingsVBox"]
+text = "Back"
+custom_minimum_size = Vector2(0, 40)
+
 [connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="CenterContainer/SettingsPanel/SettingsVBox/EasyButton" to="." method="_on_easy_pressed"]
+[connection signal="pressed" from="CenterContainer/SettingsPanel/SettingsVBox/MediumButton" to="." method="_on_medium_pressed"]
+[connection signal="pressed" from="CenterContainer/SettingsPanel/SettingsVBox/HardButton" to="." method="_on_hard_pressed"]
+[connection signal="pressed" from="CenterContainer/SettingsPanel/SettingsVBox/BackSettingsButton" to="." method="_on_back_settings_pressed"]
+[connection signal="value_changed" from="CenterContainer/SettingsPanel/SettingsVBox/VolumeSlider" to="." method="_on_volume_changed"]

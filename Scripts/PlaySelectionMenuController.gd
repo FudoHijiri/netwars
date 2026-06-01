@@ -7,4 +7,4 @@ func _on_online_button_pressed():
 	MenuManager.go_to_online_selection()
 
 func _on_back_button_pressed():
-	MenuManager.go_to_main_menu()
+	MenuManager.go_to_title_menu()

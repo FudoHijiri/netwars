@@ -2,37 +2,65 @@
 
 [ext_resource type="Script" uid="uid://cpxhbo8xc80o5" path="res://Scripts/TitleMenuController.gd" id="1_bmp3s"]
 
-[node name="TitleMenu" type="Node2D" unique_id=1097113786]
+[node name="TitleMenu" type="Node2D" unique_id=1213938270]
 script = ExtResource("1_bmp3s")
 
-[node name="Background" type="ColorRect" parent="." unique_id=1588497338]
+[node name="Background" type="ColorRect" parent="." unique_id=678629983]
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.1, 0.12, 0.16, 1)
 
-[node name="Title" type="RichTextLabel" parent="." unique_id=107055526]
-modulate = Color(1, 1, 1, 0)
-offset_left = 960.0
-offset_top = 300.0
-offset_right = 960.0
-offset_bottom = 300.0
-text = "[center][font_size=72]NetWars[/font_size][/center]"
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1382509218]
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 554.385
+offset_top = 173.52
+offset_right = 1354.3854
+offset_bottom = 773.52
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Subtitle" type="RichTextLabel" parent="." unique_id=273923755]
-modulate = Color(1, 1, 1, 0)
-offset_left = 960.0
-offset_top = 500.0
-offset_right = 960.0
-offset_bottom = 500.0
-text = "[center][font_size=32]Cybersecurity Card Battles[/font_size][/center]"
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=135780675]
+custom_minimum_size = Vector2(800, 600)
+layout_mode = 2
 
-[node name="PressAnyKey" type="RichTextLabel" parent="." unique_id=176029769]
-modulate = Color(1, 1, 1, 0)
-offset_left = 960.0
-offset_top = 800.0
-offset_right = 960.0
-offset_bottom = 800.0
-text = "[center][font_size=24]Press any key to continue[/font_size][/center]"
+[node name="Title" type="RichTextLabel" parent="CenterContainer/VBoxContainer" unique_id=1157717959]
+custom_minimum_size = Vector2(800, 150)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 72
+text = "NetWars"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="BlinkTimer" type="Timer" parent="." unique_id=1813449336]
-wait_time = 0.5
+[node name="Subtitle" type="RichTextLabel" parent="CenterContainer/VBoxContainer" unique_id=1174473702]
+custom_minimum_size = Vector2(800, 100)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "Cybersecurity Card Battles"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="CenterContainer/VBoxContainer" unique_id=1085834376]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1138279767]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Play"
+
+[node name="LoginButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=544360023]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Login / Register"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=296253309]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=203360257]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Exit"

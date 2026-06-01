@@ -6,8 +6,10 @@
 script = ExtResource("1_9xklo")
 
 [node name="Background" type="ColorRect" parent="." unique_id=640055017]
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_left = -5.0
+offset_top = -9.0
+offset_right = 1915.0
+offset_bottom = 1071.0
 color = Color(0.1, 0.12, 0.16, 1)
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=1675788109]
@@ -17,26 +19,19 @@ offset_right = 960.0
 offset_bottom = 150.0
 text = "[center][font_size=48]Online Play[/font_size][/center]"
 
-[node name="MatchmakingButton" type="Button" parent="." unique_id=537073041]
-offset_left = 620.0
-offset_top = 350.0
-offset_right = 820.0
-offset_bottom = 420.0
-text = "Matchmaking"
-
 [node name="HostButton" type="Button" parent="." unique_id=1804177174]
-offset_left = 1050.0
-offset_top = 350.0
-offset_right = 1300.0
-offset_bottom = 420.0
+offset_left = 862.0
+offset_top = 342.0
+offset_right = 1063.0
+offset_bottom = 411.0
 text = "Host Game"
 
 [node name="LobbyButton" type="Button" parent="." unique_id=1040520955]
 offset_left = 860.0
-offset_top = 500.0
+offset_top = 479.0
 offset_right = 1060.0
-offset_bottom = 570.0
-text = "Lobby"
+offset_bottom = 549.0
+text = "Join Lobby"
 
 [node name="BackButton" type="Button" parent="." unique_id=160642122]
 offset_left = 860.0
@@ -45,7 +40,6 @@ offset_right = 1060.0
 offset_bottom = 720.0
 text = "Back"
 
-[connection signal="pressed" from="MatchmakingButton" to="." method="_on_matchmaking_button_pressed"]
 [connection signal="pressed" from="HostButton" to="." method="_on_host_button_pressed"]
 [connection signal="pressed" from="LobbyButton" to="." method="_on_lobby_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

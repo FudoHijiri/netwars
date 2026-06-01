@@ -5,6 +5,11 @@ var default_difficulty = "medium"
 
 func _ready() -> void:
 	$VolumeSlider.value = master_volume
+	$VolumeSlider.value_changed.connect(_on_volume_changed)
+	$EasyButton.pressed.connect(_on_easy_difficulty)
+	$MediumButton.pressed.connect(_on_medium_difficulty)
+	$HardButton.pressed.connect(_on_hard_difficulty)
+	$BackButton.pressed.connect(_on_back_button_pressed)
 	_highlight_difficulty_button()
 
 func _on_volume_changed():
@@ -33,4 +38,4 @@ func _highlight_difficulty_button() -> void:
 			buttons[i].remove_theme_color_override("font_color")
 
 func _on_back_button_pressed():
-	MenuManager.go_to_main_menu()
+	MenuManager.go_to_title_menu()
