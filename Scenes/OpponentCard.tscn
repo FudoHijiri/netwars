@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cbqsw1ngsgy06"]
 
 [ext_resource type="Script" uid="uid://bl6q7doeqol8q" path="res://Scripts/OpponentCard.gd" id="1_606hi"]
-[ext_resource type="Texture2D" uid="uid://beguo24it82cq" path="res://Assets/Void Back Card.png" id="2_qrb68"]
+[ext_resource type="Texture2D" uid="uid://cqpx7pdm51lhm" path="res://Assets/Back Card.png" id="2_qrb68"]
 [ext_resource type="Texture2D" uid="uid://cnki306wwywji" path="res://Assets/Void Agent Card.png" id="3_r8ami"]
 
 [sub_resource type="Animation" id="Animation_h8wm0"]
@@ -193,7 +193,7 @@ script = ExtResource("1_606hi")
 
 [node name="CardBackImage" type="Sprite2D" parent="." unique_id=301208043]
 texture_filter = 1
-position = Vector2(-2.499998, -0.9999981)
+position = Vector2(-1.66893e-06, -0.5000019)
 scale = Vector2(0.23157893, 0.21616869)
 texture = ExtResource("2_qrb68")
 

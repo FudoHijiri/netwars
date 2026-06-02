@@ -1,44 +1,48 @@
 [gd_scene format=3 uid="uid://bme62qu7n2yd"]
 
-[ext_resource type="Script" uid="uid://d4kl3kq6bxsr" path="res://Scripts/LoseScreenController.gd" id="1_b2jmq"]
+[ext_resource type="Script" uid="uid://dm6jymp8yydrw" path="res://Scripts/LoseScreenController.gd" id="1_b2jmq"]
 
-[node name="LoseScreen" type="CanvasLayer"]
+[node name="LoseScreen" type="CanvasLayer" unique_id=1285874146]
 script = ExtResource("1_b2jmq")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="." unique_id=1229390574]
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 0.8)
 
-[node name="Panel" type="ColorRect" parent="."]
+[node name="Panel" type="ColorRect" parent="." unique_id=2143297342]
 offset_left = 660.0
 offset_top = 300.0
 offset_right = 1260.0
 offset_bottom = 780.0
 color = Color(0.08, 0.1, 0.15, 1)
 
-[node name="Title" type="RichTextLabel" parent="."]
+[node name="Title" type="RichTextLabel" parent="." unique_id=1837010311]
 offset_left = 960.0
 offset_top = 350.0
 offset_right = 960.0
 offset_bottom = 350.0
 text = "[center][font_size=64][color=#FF0000]YOU LOST[/color][/font_size][/center]"
 
-[node name="TurnsLabel" type="RichTextLabel" parent="."]
+[node name="TurnsLabel" type="RichTextLabel" parent="." unique_id=1296089755]
 offset_left = 660.0
 offset_top = 450.0
 offset_right = 1260.0
 offset_bottom = 500.0
-text = "[center]Turns survived: --[/center]"
+text = "Turns survived: --"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="DamageLabel" type="RichTextLabel" parent="."]
+[node name="DamageLabel" type="RichTextLabel" parent="." unique_id=2039500163]
 offset_left = 660.0
 offset_top = 520.0
 offset_right = 1260.0
 offset_bottom = 570.0
-text = "[center]You took -- damage[/center]"
+text = "You took -- damage"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="MenuButton" type="Button" parent="."]
+[node name="MenuButton" type="Button" parent="." unique_id=1135419887]
 offset_left = 810.0
 offset_top = 680.0
 offset_right = 1110.0

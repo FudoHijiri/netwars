@@ -20,6 +20,7 @@
 script = ExtResource("15_sxiwk")
 
 [node name="Background" type="ColorRect" parent="." unique_id=910327014]
+z_index = -2
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.08, 0.1, 0.15, 1)
@@ -29,7 +30,11 @@ color = Color(0.08, 0.1, 0.15, 1)
 [node name="CardManager" type="Node2D" parent="." unique_id=136925313]
 script = ExtResource("1_0xm2m")
 
+[node name="PlayerHand" type="Node2D" parent="." unique_id=1411417588]
+script = ExtResource("4_1bvp3")
+
 [node name="CardSlots" type="Node2D" parent="." unique_id=1164808710]
+z_index = -1
 
 [node name="CardSlot" parent="CardSlots" unique_id=808867315 instance=ExtResource("3_1bvp3")]
 position = Vector2(960, 750)
@@ -72,9 +77,6 @@ position = Vector2(960, 400)
 
 [node name="EnemyCardSlot6" parent="CardSlots" unique_id=964325794 instance=ExtResource("5_hptm8")]
 position = Vector2(1060, 400)
-
-[node name="PlayerHand" type="Node2D" parent="." unique_id=1411417588]
-script = ExtResource("4_1bvp3")
 
 [node name="OpponentHand" type="Node2D" parent="." unique_id=405502316]
 script = ExtResource("7_6iyac")

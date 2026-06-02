@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://btr7nhsyst1bt"]
 
 [ext_resource type="Script" uid="uid://b8svusr3liwc0" path="res://Scripts/Card.gd" id="1_hael8"]
-[ext_resource type="Texture2D" uid="uid://c5eii105vvi5c" path="res://Assets/Sentinel Back Card.png" id="2_h8wm0"]
+[ext_resource type="Texture2D" uid="uid://cqpx7pdm51lhm" path="res://Assets/Back Card.png" id="2_h8wm0"]
 [ext_resource type="Texture2D" uid="uid://d0rvqhgrwouuw" path="res://Assets/Sentinel Agent Card.png" id="3_3m7nw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hael8"]
@@ -193,7 +193,7 @@ script = ExtResource("1_hael8")
 
 [node name="CardBackImage" type="Sprite2D" parent="." unique_id=301208043]
 texture_filter = 1
-position = Vector2(-0.50000316, -0.50000703)
+position = Vector2(-3.5762787e-06, -1.0000064)
 scale = Vector2(0.23157893, 0.21616869)
 texture = ExtResource("2_h8wm0")
 

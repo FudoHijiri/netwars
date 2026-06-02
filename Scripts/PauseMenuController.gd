@@ -32,9 +32,9 @@ func _on_quit_button_pressed() -> void:
 	queue_free()
 	MenuManager.go_to_title_menu()
 
-func _show_settings(visible: bool) -> void:
-	$CenterContainer/PanelContainer.visible = !visible
-	$CenterContainer/SettingsPanel.visible = visible
+func _show_settings(is_visible: bool) -> void:
+	$CenterContainer/PanelContainer.visible = !is_visible
+	$CenterContainer/SettingsPanel.visible = is_visible
 
 func _on_back_settings_pressed() -> void:
 	_show_settings(false)
